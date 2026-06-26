@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.example</groupId>
+    <groupId>com.intelliguru.javalearning.springbootvalidation</groupId>
     <artifactId>spring-boot-validations</artifactId>
 
     <properties>
