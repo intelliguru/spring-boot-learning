@@ -26,6 +26,19 @@ private final ValidatorUtil validatorUtil;
     }
 
 
+    @PostMapping("/create-user")
+    public ResponseEntity<String> createUser(@Validated(CreateUserGroup.class) @RequestBody UserDTO userDto) {
+
+        // Business logic call
+        return ResponseEntity.ok("User Created");
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<String> updateUser(@PathVariable Long id, @Validated(UpdateUserGroup.class) @RequestBody UserDTO userDto) {
+
+        // Business logic call
+        return ResponseEntity.ok("User Updated");
+    }
 
 
 
@@ -46,30 +59,5 @@ private final ValidatorUtil validatorUtil;
 //        }
 //        return "Validation Failed ):";
 //    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @PostMapping("/create-user")
-    public ResponseEntity<String> createUser(@Validated(CreateUserGroup.class) @RequestBody UserDTO userDto) {
-
-        return ResponseEntity.ok("User Created");
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<String> updateUser(@PathVariable Long id, @Validated(UpdateUserGroup.class) @RequestBody UserDTO userDto) {
-
-        return ResponseEntity.ok("User Updated");
-    }
 
 }
