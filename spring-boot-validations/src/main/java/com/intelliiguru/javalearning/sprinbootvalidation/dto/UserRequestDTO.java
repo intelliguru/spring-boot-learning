@@ -8,11 +8,12 @@ import lombok.Getter;
 @Data
 @Getter
 public class UserRequestDTO {
-    @NotNull
+    @NotBlank
     private String name;
 
-    @Valid
-    private UserAddressDTO userAddress;
+    @NotBlank
+    @Email
+    private String email;
 
     @NotEmpty
     private String department;
@@ -20,9 +21,7 @@ public class UserRequestDTO {
     @NotBlank
     private String location;
 
-    @NotBlank
-    @Email
-    private String email;
+
 
     @NotBlank
     @Size(min = 8, max = 20)
@@ -30,6 +29,8 @@ public class UserRequestDTO {
 
     @Min(18) @Max(60)
     private int age;
+    @Valid
+    private UserAddressDTO userAddress;
 
     @NotBlank
     // Enforces a standard 10-digit US phone format: 123-456-7890

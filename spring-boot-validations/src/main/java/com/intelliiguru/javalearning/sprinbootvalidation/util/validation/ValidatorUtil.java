@@ -16,7 +16,8 @@ public class ValidatorUtil {
     private final Validator validator;
 
     public boolean validateUser(UserRequestDTO userDTO) {
-        Set<ConstraintViolation<UserRequestDTO>> violations = validator.validate(userDTO);
+        Set<ConstraintViolation<UserRequestDTO>>
+                violations = validator.validate(userDTO);
 
         if(!violations.isEmpty()) {
             for (ConstraintViolation<UserRequestDTO> violation : violations) {
