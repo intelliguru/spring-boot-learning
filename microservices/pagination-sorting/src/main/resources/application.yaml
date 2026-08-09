@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: YOUR_SQL_DB_URL
+    username: YOUR_SQL_DB_USER_NAME
+    password: YOUR_SQL_DB_PASSWORD
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update

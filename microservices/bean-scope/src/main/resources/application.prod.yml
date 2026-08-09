@@ -1,0 +1,10 @@
+app:
+  name: IntelliiGuru
+  version: 1.0
+  owner: Balkrishna
+  userid: 55438
+
+  security:
+    jwt:
+      secret: mySecret
+      expiry: "3600"
